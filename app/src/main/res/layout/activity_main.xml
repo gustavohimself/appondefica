@@ -4,14 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/teste"
     android:orientation="vertical"
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity">
 
     <TextView
         android:id="@+id/tvEstado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Estado"
+        android:layout_marginBottom="10dp"
+        android:background="#315E85"
+        android:padding="5dp"
+        android:text="Selecione o Estado:"
         android:textColor="#3C3A3A"
         android:textSize="34dp"
         android:textStyle="bold" />
@@ -19,13 +23,18 @@
     <Spinner
         android:id="@+id/spEstado"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="35dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/my" />
 
     <TextView
         android:id="@+id/tvCidade"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Cidade"
+        android:layout_marginBottom="10dp"
+        android:background="#365875"
+        android:padding="5dp"
+        android:text="Selecione a Cidade: "
         android:textColor="#3C3A3A"
         android:textSize="34dp"
         android:textStyle="bold" />
@@ -33,13 +42,17 @@
     <Spinner
         android:id="@+id/spCidade"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="35dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/my" />
 
     <Button
         android:id="@+id/btBuscar"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Buscar" />
+        android:layout_gravity="center"
+        android:text="Buscar"
+        android:textStyle="bold" />
 
     <ScrollView
         android:layout_width="match_parent"
