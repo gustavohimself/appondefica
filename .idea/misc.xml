@@ -3,13 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/GITRepos/appondefica/app/src/main/res/drawable/my.xml" value="0.1" />
-        <entry key="..\:/GITRepos/appondefica/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
-        <entry key="..\:/GITRepos/appondefica/app/src/main/res/layout/activity_maps.xml" value="0.25416666666666665" />
-        <entry key="..\:/GITRepos/appondefica/app/src/main/res/layout/item_listview.xml" value="0.4" />
-        <entry key="..\:/GITRepos/appondefica/app/src/main/res/layout/maps_detalhes.xml" value="0.253125" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="app/src/main/res/layout/item_listview.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/item_listview.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/maps_detalhes.xml" value="0.1" />
         <entry key="app/src/main/res/menu/menu.xml" value="0.19322916666666667" />
       </map>
     </option>
@@ -19,5 +15,12 @@
   </component>
   <component name="ProjectType">
     <option name="id" value="Android" />
+  </component>
+  <component name="VisualizationToolProject">
+    <option name="state">
+      <ProjectState>
+        <option name="scale" value="0.33" />
+      </ProjectState>
+    </option>
   </component>
 </project>
