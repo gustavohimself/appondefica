@@ -19,7 +19,9 @@ import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import retrofit2.Call;
@@ -47,8 +49,6 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(Call<List<Estado>> call, Response<List<Estado>> response) {
                 MainActivity.this.estados = response.body();
 
-
-
                 ArrayAdapter aa = new ArrayAdapter(MainActivity.this, android.R.layout.simple_dropdown_item_1line, MainActivity.this.estados);
 
                 spinnerEstados.setAdapter(aa);
@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
                             }
                         }
                 );
+
             }
 
             @Override
@@ -79,7 +80,6 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<List<Municipio>> call, Response<List<Municipio>> response) {
                 MainActivity.this.municipios = response.body();
-
 
 
                 ArrayAdapter aa = new ArrayAdapter(MainActivity.this, android.R.layout.simple_dropdown_item_1line, MainActivity.this.municipios);
@@ -106,15 +106,21 @@ public class MainActivity extends AppCompatActivity {
 
     private void buscarEnderecos()
     {
-        if(this.estados == null|| this.municipios == null) return;
+        if(this.estados == null || this.municipios == null) return;
         Call<List<CEP>> call = new RetrofitConfig("https://viacep.com.br/ws/").getCEPService().buscaEndereco(this.estados.get(this.estadoSelecionado).sigla, this.municipios.get(this.municipioSelecionado).toString(), this.tvLocalidade.getText().toString());
         call.enqueue(new Callback<List<CEP>>() {
             @Override
             public void onResponse(Call<List<CEP>> call, Response<List<CEP>> response) {
 
                 MainActivity.this.enderecos = response.body();
-                MainActivity.this.adapter = new CEPAdapter(MainActivity.this, R.layout.item_listview, MainActivity.this.enderecos);
-                MainActivity.this.listView.setAdapter(MainActivity.this.adapter);
+                if(MainActivity.this.enderecos != null)
+                {
+                    MainActivity.this.adapter = new CEPAdapter(MainActivity.this, R.layout.item_listview, MainActivity.this.enderecos);
+                    MainActivity.this.listView.setAdapter(MainActivity.this.adapter);
+                }
+                else
+                    return;
+
             }
 
             @Override

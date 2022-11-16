@@ -1,10 +1,12 @@
 package com.appondefica;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -33,12 +35,14 @@ public class MapsDetalhesActivity extends AppCompatActivity implements OnMapRead
     private MarkerOptions markerOptions = new MarkerOptions();
     private static final String MAP_VIEW_BUNDLE_KEY="MapViewBundleKey";
     private CEP endereco;
+    private Button btVoltar;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_maps_detalhes);
         mapView = findViewById(R.id.mapView);
+        btVoltar = findViewById(R.id.btVoltarMaps);
         mapView.setClickable(true);
         Bundle mapViewBundle =null;
         if(savedInstanceState!=null)
@@ -47,6 +51,14 @@ public class MapsDetalhesActivity extends AppCompatActivity implements OnMapRead
         mapView.getMapAsync(this);
 
         endereco = (CEP) getIntent().getSerializableExtra("addressDetails");
+
+        btVoltar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(MapsDetalhesActivity.this, MainActivity.class);
+                startActivity(i);
+            }
+        });
 
     }
 
@@ -99,6 +111,8 @@ public class MapsDetalhesActivity extends AppCompatActivity implements OnMapRead
         marker=googleMap.addMarker(markerOptions);
         googleMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
     }
+
+
 
     @Override
     protected void onResume() {
