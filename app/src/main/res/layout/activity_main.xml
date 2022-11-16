@@ -54,14 +54,47 @@
         android:text="Buscar"
         android:textStyle="bold" />
 
+    <TextView
+        android:id="@+id/tvCidade2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="#365875"
+        android:padding="5dp"
+        android:text="Selecione a Localidade: "
+        android:textColor="#3C3A3A"
+        android:textSize="34dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvLocalidade"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:autoText="false"
+        android:background="#365875"
+        android:ems="10"
+        android:gravity="center"
+        android:hint="Digite nome da Rua"
+        android:inputType="text"
+        android:textColor="#000000"
+        android:textIsSelectable="true"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <ListView
-            android:id="@+id/listView"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="500dp"
+            android:orientation="vertical">
+
+            <ListView
+                android:id="@+id/listView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
     </ScrollView>
 
 </LinearLayout>

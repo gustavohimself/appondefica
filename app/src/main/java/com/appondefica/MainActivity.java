@@ -131,11 +131,6 @@ public class MainActivity extends AppCompatActivity {
         this.listView = findViewById(R.id.listView);
         btBuscar.setOnClickListener(e->{buscarEnderecos();});
         this.getEstados();
-
-
-
-
-
     }
 
     @Override

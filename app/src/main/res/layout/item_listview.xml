@@ -9,155 +9,144 @@
     <TextView
         android:id="@+id/titulo"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginStart="19dp"
         android:text="Estado:"
         android:textColor="#000000"
         android:textSize="20dp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="19dp"
-        tools:layout_editor_absoluteY="0dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/titulo3"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="27dp"
         android:text="Cidade:"
         android:textColor="#000000"
         android:textSize="20dp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="18dp"
-        tools:layout_editor_absoluteY="27dp" />
+        app:layout_constraintEnd_toEndOf="@+id/titulo"
+        app:layout_constraintTop_toBottomOf="@+id/titulo" />
 
     <TextView
         android:id="@+id/titulo5"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginBottom="1dp"
         android:text="Bairro:"
         android:textColor="#000000"
         android:textSize="20dp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="26dp"
-        tools:layout_editor_absoluteY="80dp" />
+        app:layout_constraintBottom_toTopOf="@+id/titulo4"
+        app:layout_constraintEnd_toEndOf="@+id/titulo7" />
 
     <TextView
         android:id="@+id/titulo4"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginBottom="16dp"
         android:text="Latitude:"
         android:textColor="#000000"
         android:textSize="20dp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="7dp"
-        tools:layout_editor_absoluteY="108dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/titulo7"
+        app:layout_constraintHorizontal_bias="0.3"
+        app:layout_constraintStart_toStartOf="@+id/titulo7" />
 
     <TextView
         android:id="@+id/titulo10"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginEnd="68dp"
         android:text="Longitude:"
         android:textColor="#000000"
         android:textSize="20dp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="246dp"
-        tools:layout_editor_absoluteY="108dp" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvLong"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/titulo7"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="27dp"
         android:text="Rua:"
         android:textColor="#000000"
         android:textSize="20dp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="46dp"
-        tools:layout_editor_absoluteY="54dp" />
-
-    <TextView
-        android:id="@+id/titulo9"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nº"
-        android:textColor="#000000"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="246dp"
-        tools:layout_editor_absoluteY="81dp" />
-
-    <TextView
-        android:id="@+id/tvNumero"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="109"
-        android:textColor="#000000"
-        android:textSize="20dp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="270dp"
-        tools:layout_editor_absoluteY="81dp" />
+        app:layout_constraintEnd_toEndOf="@+id/titulo3"
+        app:layout_constraintTop_toBottomOf="@+id/titulo3" />
 
     <TextView
         android:id="@+id/tvBairro"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="300dp"
+        android:layout_height="27dp"
         android:text="bairro"
         android:textColor="#000000"
         android:textSize="20dp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="102dp"
-        tools:layout_editor_absoluteY="81dp" />
+        app:layout_constraintStart_toStartOf="@+id/tvLat"
+        app:layout_constraintTop_toBottomOf="@+id/tvRua" />
 
     <TextView
         android:id="@+id/tvEstados"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="27dp"
+        android:layout_marginStart="15dp"
         android:text="São Paulo"
         android:textColor="#000000"
         android:textSize="20dp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="102dp"
-        tools:layout_editor_absoluteY="0dp" />
+        app:layout_constraintStart_toEndOf="@+id/titulo"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvCidades"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="27dp"
         android:text="Presidente Prudente"
         android:textColor="#000000"
         android:textSize="20dp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="102dp"
-        tools:layout_editor_absoluteY="27dp" />
+        app:layout_constraintStart_toStartOf="@+id/tvEstados"
+        app:layout_constraintTop_toBottomOf="@+id/tvEstados" />
 
     <TextView
         android:id="@+id/tvRua"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="27dp"
         android:text="Jose Bongiovani"
         android:textColor="#000000"
         android:textSize="20dp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="102dp"
-        tools:layout_editor_absoluteY="54dp" />
+        app:layout_constraintStart_toStartOf="@+id/tvCidades"
+        app:layout_constraintTop_toBottomOf="@+id/tvCidades" />
 
     <TextView
         android:id="@+id/tvLat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="144dp"
+        android:layout_height="27dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginBottom="1dp"
         android:text="1,151848"
         android:textColor="#000000"
         android:textSize="20dp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="102dp"
-        tools:layout_editor_absoluteY="107dp" />
+        app:layout_constraintBottom_toBottomOf="@+id/titulo4"
+        app:layout_constraintStart_toEndOf="@+id/titulo4"
+        app:layout_constraintTop_toBottomOf="@+id/titulo5" />
 
     <TextView
         android:id="@+id/tvLong"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="50dp"
+        android:layout_height="27dp"
+        android:layout_marginBottom="15dp"
         android:text="1,151848"
         android:textColor="#000000"
         android:textSize="20dp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="343dp"
-        tools:layout_editor_absoluteY="108dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/titulo10" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
