@@ -17,6 +17,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -32,6 +33,7 @@ public class MainActivity extends AppCompatActivity {
     private Spinner spinnerEstados;
     private Spinner spinnerMunicipios;
     private Button btBuscar;
+    private TextView tvLocalidade;
     private ListView listView;
     private ArrayAdapter<CEP> adapter;
     private int estadoSelecionado;
@@ -105,7 +107,7 @@ public class MainActivity extends AppCompatActivity {
     private void buscarEnderecos()
     {
         if(this.estados == null|| this.municipios == null) return;
-        Call<List<CEP>> call = new RetrofitConfig("https://viacep.com.br/ws/").getCEPService().buscaEndereco(this.estados.get(this.estadoSelecionado).sigla, this.municipios.get(this.municipioSelecionado).toString(), "Rua");
+        Call<List<CEP>> call = new RetrofitConfig("https://viacep.com.br/ws/").getCEPService().buscaEndereco(this.estados.get(this.estadoSelecionado).sigla, this.municipios.get(this.municipioSelecionado).toString(), this.tvLocalidade.getText().toString());
         call.enqueue(new Callback<List<CEP>>() {
             @Override
             public void onResponse(Call<List<CEP>> call, Response<List<CEP>> response) {
@@ -129,8 +131,16 @@ public class MainActivity extends AppCompatActivity {
         this.spinnerMunicipios = findViewById(R.id.spCidade);
         this.btBuscar = findViewById(R.id.btBuscar);
         this.listView = findViewById(R.id.listView);
+        this.tvLocalidade = findViewById(R.id.tvLocalidade);
         btBuscar.setOnClickListener(e->{buscarEnderecos();});
         this.getEstados();
+
+        this.listView.setOnItemClickListener((adapterView, view, i, l) -> {
+            Intent intent = new Intent(MainActivity.this, MapsDetalhesActivity.class);
+            intent.putExtra("addressDetails", MainActivity.this.enderecos.get(i));
+            startActivity(intent);
+        });
+
     }
 
     @Override

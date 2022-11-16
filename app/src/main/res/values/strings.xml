@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">AppOndeFica</string>
     <string name="title_activity_maps">MapsActivity</string>
+    <string name="API_KEY">AIzaSyCCEy1BFjpq8xVhUe2xTVSAzWfNrc0uG6g</string>
 </resources>

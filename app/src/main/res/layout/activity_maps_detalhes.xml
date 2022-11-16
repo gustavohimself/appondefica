@@ -11,13 +11,15 @@
         android:layout_width="match_parent"
         android:layout_height="500dp"
         tools:layout_editor_absoluteX="2dp"
-        tools:layout_editor_absoluteY="0dp" />
+        tools:layout_editor_absoluteY="0dp"
+        tools:ignore="MissingConstraints" />
 
     <ScrollView
         android:layout_width="409dp"
         android:layout_height="229dp"
         tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="501dp">
+        tools:layout_editor_absoluteY="501dp"
+        tools:ignore="MissingConstraints">
 
         <LinearLayout
             android:layout_width="match_parent"

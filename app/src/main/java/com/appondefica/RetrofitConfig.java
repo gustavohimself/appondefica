@@ -19,4 +19,5 @@ public class RetrofitConfig {
         return this.retrofit.create(CEPService.class);
     }
     public IBGEService getIBGEService() { return this.retrofit.create(IBGEService.class); }
+    public GeocodingService getGeocodingService() { return this.retrofit.create(GeocodingService.class); }
 }

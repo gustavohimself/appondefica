@@ -61,7 +61,7 @@
         android:layout_marginBottom="10dp"
         android:background="#365875"
         android:padding="5dp"
-        android:text="Selecione a Localidade: "
+        android:text="Localidade: "
         android:textColor="#3C3A3A"
         android:textSize="34dp"
         android:textStyle="bold" />
@@ -83,11 +83,13 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="500dp"
+            android:layout_height="wrap_content"
             android:orientation="vertical">
 
             <ListView
