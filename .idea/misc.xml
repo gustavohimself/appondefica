@@ -3,6 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/GITRepos/appondefica/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
+        <entry key="..\:/GITRepos/appondefica/app/src/main/res/layout/item_listview.xml" value="0.25416666666666665" />
+        <entry key="..\:/GITRepos/appondefica/app/src/main/res/layout/maps_detalhes.xml" value="0.25416666666666665" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.33" />
         <entry key="app/src/main/res/layout/item_listview.xml" value="0.33" />
         <entry key="app/src/main/res/layout/maps_detalhes.xml" value="0.1" />
