@@ -38,9 +38,11 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView2"
+                android:id="@+id/detalhes"
                 android:layout_width="match_parent"
                 android:layout_height="101dp"
+                android:paddingStart="5pt"
+                android:paddingEnd="1pt"
                 android:text="Exibir todos os dados de enderço aqui, incluindo Lat e Long"
                 android:textSize="25dp" />
 

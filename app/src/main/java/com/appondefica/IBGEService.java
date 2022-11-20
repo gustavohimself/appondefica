@@ -7,7 +7,7 @@ import retrofit2.http.GET;
 import retrofit2.http.Path;
 
 public interface IBGEService {
-    @GET("estados")
+    @GET("estados?orderBy=nome")
     Call<List<Estado>> obterEstados();
 
     @GET("estados/{estado}/municipios")

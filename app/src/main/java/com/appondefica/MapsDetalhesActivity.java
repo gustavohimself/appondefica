@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
@@ -30,6 +31,7 @@ public class MapsDetalhesActivity extends AppCompatActivity implements OnMapRead
 
     private MapView mapView;
     private GoogleMap googleMap;
+    private TextView detalhes;
     private Marker marker;
     private LatLng latLng = null;
     private MarkerOptions markerOptions = new MarkerOptions();
@@ -43,6 +45,7 @@ public class MapsDetalhesActivity extends AppCompatActivity implements OnMapRead
         setContentView(R.layout.activity_maps_detalhes);
         mapView = findViewById(R.id.mapView);
         btVoltar = findViewById(R.id.btVoltarMaps);
+        detalhes = findViewById(R.id.detalhes);
         mapView.setClickable(true);
         Bundle mapViewBundle =null;
         if(savedInstanceState!=null)
@@ -83,9 +86,11 @@ public class MapsDetalhesActivity extends AppCompatActivity implements OnMapRead
             Geocoding geocoding = response.body();
             MapsDetalhesActivity.this.latLng = new LatLng(geocoding.results.get(0).geometry.location.lat, geocoding.results.get(0).geometry.location.lng);
 
-
-
             mudarPosicao();
+
+            MapsDetalhesActivity.this.detalhes.setText(endereco.logradouro + " - " + endereco.bairro + ", " + endereco.localidade + " - " +
+                                                        endereco.uf + ", " + endereco.cep + ", " + latLng
+            );
 
             }
 

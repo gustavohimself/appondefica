@@ -34,8 +34,8 @@ public class CEPAdapter extends ArrayAdapter<CEP> {
         TextView tvRua = (TextView) convertView.findViewById(R.id.tvRua);
         TextView tvBairro = (TextView) convertView.findViewById(R.id.tvBairro);
         //TextView tvNumero = (TextView) convertView.findViewById(R.id.tvNumero);
-        TextView tvLatitude = (TextView) convertView.findViewById(R.id.tvLat);
-        TextView tvLongitude = (TextView) convertView.findViewById(R.id.tvLong);
+        //TextView tvLatitude = (TextView) convertView.findViewById(R.id.tvLat);
+        //TextView tvLongitude = (TextView) convertView.findViewById(R.id.tvLong);
 
         CEP cep = (CEP) this.getItem(position);
 
@@ -44,8 +44,8 @@ public class CEPAdapter extends ArrayAdapter<CEP> {
         tvRua.setText(cep.logradouro);
         tvBairro.setText(cep.bairro);
         //tvNumero.setText("");
-        tvLatitude.setText("");
-        tvLongitude.setText("");
+        //tvLatitude.setText("");
+        //tvLongitude.setText("");
 
         return convertView;
     }
