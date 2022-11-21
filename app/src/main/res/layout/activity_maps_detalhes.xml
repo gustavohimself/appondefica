@@ -44,7 +44,7 @@
                 android:paddingStart="5pt"
                 android:paddingEnd="1pt"
                 android:text="Exibir todos os dados de enderço aqui, incluindo Lat e Long"
-                android:textSize="25dp" />
+                android:textSize="20dp" />
 
             <Button
                 android:id="@+id/btVoltarMaps"
