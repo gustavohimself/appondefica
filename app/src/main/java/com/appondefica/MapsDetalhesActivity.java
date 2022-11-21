@@ -87,8 +87,7 @@ public class MapsDetalhesActivity extends AppCompatActivity implements OnMapRead
 
             mudarPosicao();
 
-            MapsDetalhesActivity.this.detalhes.setText(endereco.logradouro + " - " + endereco.bairro + ", " + endereco.localidade + " - " +
-                                                        endereco.uf + ", " + endereco.cep + ", " + latLng
+            MapsDetalhesActivity.this.detalhes.setText(endereco.toString() + " " + latLng
             );
 
             }

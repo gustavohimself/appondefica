@@ -43,6 +43,7 @@
                 android:layout_height="101dp"
                 android:paddingStart="5pt"
                 android:paddingEnd="1pt"
+                android:textAlignment="center"
                 android:textSize="20dp" />
 
             <Button
