@@ -58,8 +58,7 @@ public class MapsDetalhesActivity extends AppCompatActivity implements OnMapRead
         btVoltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent i = new Intent(MapsDetalhesActivity.this, MainActivity.class);
-                startActivity(i);
+                finish();
             }
         });
 
